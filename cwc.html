@@ -52,47 +52,14 @@
 								<div class="inner">
 
 									<h3 class="major">Objective</h3>
-									<p>As a research assistant in Brigham Young University’s FLOW Lab, I was tasked
-									with creating an optimization tool for offshore wind farms that optimizes a wind farm by
-									adjusting the positioning of the turbines. Adjusting the layout of the wind farm affects the
-									Levelized Cost of Energy (LCOE), which the optimizer should minimize. The LCOE for
-									any given layout of wind turbines should take into account the effect of wind speed,
-									wind direction, and water depth on power output for the wind farm. The factors will also
-									affect the material cost for a monopile foundation. This tool should also be able to
-									create and plot a variety of depth profiles for testing their effects on the resultant
-									optimized wind farm layout.
-									</p>
-
-									<h3 class="major">Technical Details</h3>
-									<p>I programmed this optimizer in Julia, using the FLOWFarm and SNOW libraries
-									from Brigham Young University’s FLOW Lab. These libraries have built-in functions for
-									performing sparse non-linear optimizations and calculating important properties related
-									to wind farms, such as wake interference between turbines and annual energy
-									production. These libraries do not currently have methods for dynamically calculating
-									the foundation costs for the turbines in an offshore wind farm, so I created functions to
-									generate different depth patterns and calculate the cost of a turbine’s monopile
-									foundation given a specified depth, wind speed, turbine dimensions, and yield stress. To
-									estimate the cost of the monopile, the program calculates the diameter and thickness of
-									the monopile based on the yield stress of steel and the largest bending moment caused
-									by the wind load on the turbine, factoring in the length of the beam required for a given
-									depth. The beam's diameter, thickness, and length can then be used to find the beam's
-									mass, which can then be converted into a cost and used in the optimization of the
-									LCOE. The optimization is performed using a gradient-based descent and automatic
-									differentiation to find the most favorable action for the optimizer to take in each iteration.
-									</p>
-
-									<h3 class="major">Results</h3>
-									<p>The functions that I created to calculate the Levelized Cost of Energy for an
-									offshore wind farm, taking into account the monopile foundation costs under varying
-									conditions, were validated as my model returned values within 3% of those found in a
-									paper published by the National Renewable Energy Laboratory that I based my
-									monopile modeling approach on. The 3% variance can be accounted for by slight
-									differences in their assumptions for the cost of the tower and wind data compared to the
-									values assumed in my model. My optimizer was also successful in the main objective of
-									decreasing the LCOE. For the initial test state with a constant depth of 23.5m, the
-									optimizer improved the LCOE of the wind farm by 8.45%. When running tests with
-									several depth patterns varying from 10 to 60m, the optimizer improved the LCOE by
-									8.99% on average. The Julia code I developed can be found on my Github.
+									<p>I am currently working with a team of 13 students to design a wind turbine to
+									compete in the Collegiate Wind Competition hosted by the Department of Energy. I am
+									working with a subteam of four students to design and create the control system for our
+									turbine. The control system must be able to adjust the pitch of the turbine blades, slow
+									the turbine to 10% of its maximum speed under emergency stop conditions, detect the
+									ambient wind temperature, and adjust a resistor load connected to the generator.
+									Meeting all of these objectives will allow us to regulate the power output of our turbine’s
+									generator and score well in the upcoming competition.
 									</p>
 
 									<section class="features">
@@ -109,6 +76,31 @@
 											<a href="#" class="special">Learn more</a>
 										</article>
 									</section>
+
+									<h3 class="major">Technical Details</h3>
+									<p>We use an encoder to measure the RPM of our turbine, a pitot tube connected to
+									a pressure sensor to monitor wind speed, and a voltage divider to monitor power output
+									and load connection. The data acquired is passed to an Arduino microcontroller and
+									used to regulate and update the states guiding the control of the turbine and load side
+									components. To regulate the power curve, we designed a variable load that
+									incorporates a resistor array to maximize power generation at wind speeds from 5-11
+									m/s. A variable pitch system will ensure steady power from 11 m/s to 14 m/s and will be
+									controlled by a linear actuator connected to an Arduino. We have already built the pitch
+									system and are currently prototyping the variable load design and testing the logic and
+									functionality of our state machine.
+									</p>
+
+									<h3 class="major">Results</h3>
+									<p>At the beginning of each month, we conduct a mock competition to check the
+									current state of our turbine and estimate the score we would receive in the real
+									competition. We have access to our university’s team results from the previous year, as
+									well as the scores received by the other universities that attended the competition last
+									year. We use these scores as benchmarks to help gauge the success of our turbine
+									prototype. Our current prototype has already improved upon the score our university’s
+									team received last year, and is able to achieve a coefficient of power near that of the
+									team that won the competition last year. In wind speeds of 11 m/s, our turbine is able to
+									produce 19.8 W of power with a coefficient of power of 0.152.
+									</p>
 
 								</div>
 							</div>

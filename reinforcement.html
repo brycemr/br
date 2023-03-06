@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Reinforcement Learning Agent</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="cs_projects.html">Computer Science Projects</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Projects</a></li>
+								<li><a href="elements.html">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>REINFORCEMENT LEARNING MODEL FOR INFANT ROLLING</h2>
+								<p>A gradient descent optimization of an offshore wind farm implemented using Julia.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Objective</h3>
+									<p>As part of a Neuromechanics of Movement course, I wanted to explore how
+									human infants learn to roll over by training a reinforcement learning agent. This required
+									creating a simple model of a human infant for the reinforcement learning agent to
+									control and specifying the possible actions of the agents so they could learn to roll over.
+									</p>
+
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section>
+
+									<h3 class="major">Technical Details</h3>
+									<p>I created the model for the infant, and trained the reinforcement learning agent, in
+									the Unity game engine. This allowed me to use the Unity Machine Learning Agents Toolkit
+									(ML-Agents) package which uses Python to run a deep reinforcement learning algorithm
+									that uses Unity as the learning environment. For the agent to learn, it needs to take action,
+									make observations about the environment, and receive a reward or punishment based on
+									its state. My agent was given four continuous actions to choose from for its limbs and chose
+									the corresponding amount of torque to apply for these actions. The agent was also given
+									two discrete actions to determine the axis of rotation for the arms. After each step, the agent
+									would make eight observations to determine the rotation of its limbs, torso, and the vertical
+									position of a marker on its chest. These observations were pertaining to the rotation of its
+									limbs, torso, and the position of the marker. If the agent rolled over completely, and the
+									marker touched the floor, it would be given a large reward in addition to the time remaining
+									on a 30-second timer. If the timer terminated before the agent was able to roll over, it would
+									receive a score determined by the position of the marker, with the reward increasing as the
+									marker approached the floor. These actions, observations, and rewards were handled by
+									C# scripts that I developed. The scripts turned the actions selected by the agent into limb
+									torques, and then returned the observations and reward values back to the agent.
+									</p>
+
+									<h3 class="major">Results</h3>
+									<p>The reinforcement learning agent that I trained met my primary goal and was
+									successful in learning to roll over. It also exhibited a rolling pattern similar to those seen in
+									human infants, as it synchronously used its limbs to rotate its torso. However, the learning
+									of this agent was not as stable as I would have hoped. I believe this was in part due to the
+									limb control that the agent had access to in the C# scripts I developed. The limb control was
+									difficult for a human to learn and in future development, I would like to modify the control to
+									make the same actions result in more consistent movements across different arm postures.
+									I would also want to attempt to address the issues with stability by experimenting with
+									changes to the configuration of the reinforcement learning algorithm, as well as changes to
+									the actions and observations that the agent makes.
+									</p>
+
+								</div>
+							</div>
+
+					</section>
+
+					<!-- Footer -->
+						<section id="footer">
+							<div class="inner">
+								<h2 class="major">Get in touch</h2>
+								<p>I do not have any social media accounts, but feel free to reach out if you would like to know more or want to collaborate!</p>
+								<ul class="contact">
+									<li class="icon solid fa-home">
+										Provo, UT
+									</li>
+									<li class="icon solid fa-phone">(385) 233-7360</li>
+									<li class="icon solid fa-envelope"><a href="#">brycerichard26@gmail.com</a></li>
+								</ul>
+								<ul class="copyright">
+									<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+							</div>
+						</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
