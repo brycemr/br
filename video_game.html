@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Offshore Wind Farm Optimization</title>
+		<title>Puzzle Video Game</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,8 +43,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Offshore Wind Farm Optimization</h2>
-								<p>A gradient descent optimization of an offshore wind farm implemented using Julia.</p>
+								<h2>Puzzle Video Game</h2>
+								<p>A 3D Puzzle Video Game I am developing in the Unity game engine in my spare time.</p>
 							</div>
 						</header>
 
@@ -77,35 +77,37 @@
 									</section>
 
 									<h3 class="major">Technical Details</h3>
-									<p>I programmed this optimizer in Julia, using the FLOWFarm and SNOW libraries
-									from Brigham Young University’s FLOW Lab. These libraries have built-in functions for
-									performing sparse non-linear optimizations and calculating important properties related
-									to wind farms, such as wake interference between turbines and annual energy
-									production. These libraries do not currently have methods for dynamically calculating
-									the foundation costs for the turbines in an offshore wind farm, so I created functions to
-									generate different depth patterns and calculate the cost of a turbine’s monopile
-									foundation given a specified depth, wind speed, turbine dimensions, and yield stress. To
-									estimate the cost of the monopile, the program calculates the diameter and thickness of
-									the monopile based on the yield stress of steel and the largest bending moment caused
-									by the wind load on the turbine, factoring in the length of the beam required for a given
-									depth. The beam's diameter, thickness, and length can then be used to find the beam's
-									mass, which can then be converted into a cost and used in the optimization of the
-									LCOE. The optimization is performed using a gradient-based descent and automatic
-									differentiation to find the most favorable action for the optimizer to take in each iteration.
+									<p>I used the Unity game engine to develop this game and used C#
+										 scripts to control the different aspects of the game. To store
+										 player data, I used JSON in a text file that I would read from
+										at game startup and write to when the player terminates the game.
+										I used another JSON file to specify the different locations and
+										arrangements that the rooms could take when moved around during
+										the game. The models I used for this game were downloaded from
+										the Unity Asset store or created using simple elements
+										available in the Unity Editor. The game also allows for
+										player control using a mouse and keyboard or using a
+										Playstation 4 controller. To achieve this functionality
+										I had to create code that would work based on mapped inputs,
+										rather than directly watching for specific buttons or keys from
+										the user. One large challenge in this project was moving the rooms
+										around while maintaining all of their contents even as the player
+										moved items between rooms. I addressed this issue by assigning a
+										room as a parent for each game object and then moving these game objects to
+										maintain their same relative position in the room anytime the room
+										changed position and or orientation. The parent room for objects changes
+										as the objects pass through invisible triggers placed in doorways.
+										The triggers cause a script to reassign the parent room to match the
+										current room, so when the rooms shift all the objects inside shift with it.
 									</p>
 
 									<h3 class="major">Results</h3>
-									<p>The functions that I created to calculate the Levelized Cost of Energy for an
-									offshore wind farm, taking into account the monopile foundation costs under varying
-									conditions, were validated as my model returned values within 3% of those found in a
-									paper published by the National Renewable Energy Laboratory that I based my
-									monopile modeling approach on. The 3% variance can be accounted for by slight
-									differences in their assumptions for the cost of the tower and wind data compared to the
-									values assumed in my model. My optimizer was also successful in the main objective of
-									decreasing the LCOE. For the initial test state with a constant depth of 23.5m, the
-									optimizer improved the LCOE of the wind farm by 8.45%. When running tests with
-									several depth patterns varying from 10 to 60m, the optimizer improved the LCOE by
-									8.99% on average. The Julia code I developed can be found on my Github.
+									<p>I was able to create a first-person puzzle video game prototype.
+										The rooms rearranged themselves as desired while the game progressed,
+										becoming a part of the overall puzzle of the game. I have also been able
+										 to implement a pause screen, a settings menu, and save files. I plan to
+										 continue developing this game in the future and eventually publish it to
+										 a video game digital distribution service.
 									</p>
 
 								</div>
