@@ -44,7 +44,16 @@
 						<header>
 							<div class="inner">
 								<h2>Offshore Wind Farm Optimization</h2>
-								<p>A gradient descent optimization of an offshore wind farm implemented using Julia.</p>
+								<p>As a research assistant in Brigham Young University’s FLOW Lab, I was tasked
+								with creating an optimization tool for offshore wind farms that optimizes a wind farm by
+								adjusting the positioning of the turbines. Adjusting the layout of the wind farm affects the
+								Levelized Cost of Energy (LCOE), which the optimizer should minimize. The LCOE for
+								any given layout of wind turbines should take into account the effect of wind speed,
+								wind direction, and water depth on power output for the wind farm. The factors will also
+								affect the material cost for a monopile foundation. This tool should also be able to
+								create and plot a variety of depth profiles for testing their effects on the resultant
+								optimized wind farm layout.
+								</p>
 							</div>
 						</header>
 
@@ -52,17 +61,24 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Objective</h3>
-									<p>As a research assistant in Brigham Young University’s FLOW Lab, I was tasked
-									with creating an optimization tool for offshore wind farms that optimizes a wind farm by
-									adjusting the positioning of the turbines. Adjusting the layout of the wind farm affects the
-									Levelized Cost of Energy (LCOE), which the optimizer should minimize. The LCOE for
-									any given layout of wind turbines should take into account the effect of wind speed,
-									wind direction, and water depth on power output for the wind farm. The factors will also
-									affect the material cost for a monopile foundation. This tool should also be able to
-									create and plot a variety of depth profiles for testing their effects on the resultant
-									optimized wind farm layout.
-									</p>
+									<section class="features">
+										<article>
+											<img src="images/farm1.png" alt="" />
+											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 60 meters. Initial LCOE of wind farm (White): 200.9 $/MWh. Optimized LCOE of wind farm (Green): 182.9 $/MWh. The optimizer improved the LCOE by 8.99% </p>
+										</article>
+										<article>
+											<img src="images/simple_farm.png" alt="" />
+											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 30 meters. Initial LCOE of wind farm (White): 183.4 $/MWh. Optimized LCOE of wind farm (Green): 166.4 $/MWh. The optimizer improved the LCOE by 9.26% </p>
+										</article>
+										<article>
+											<img src="images/farm3.png" alt="" />
+											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 60 meters. Initial LCOE of wind farm (White): 192.3 $/MWh. Optimized LCOE of wind farm (Green): 177.3 $/MWh. The optimizer improved the LCOE by 7.81% </p>
+										</article>
+										<article>
+											<img src="images/farm4.png" alt="" />
+											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 60 meters. Initial LCOE of wind farm (White): 196.7 $/MWh. Optimized LCOE of wind farm (Green): 177.0 $/MWh. The optimizer improved the LCOE by 10.0% </p>
+										</article>
+									</section>
 
 									<h3 class="major">Technical Details</h3>
 									<p>I programmed this optimizer in Julia, using the FLOWFarm and SNOW libraries
@@ -95,22 +111,6 @@
 									several depth patterns varying from 10 to 60m, the optimizer improved the LCOE by
 									8.99% on average. The Julia code I developed can be found on my Github.
 									</p>
-
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-
 								</div>
 							</div>
 
