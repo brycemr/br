@@ -1,4 +1,5 @@
 @import url(fontawesome-all.min.css);
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
@@ -3014,8 +3015,8 @@ input, select, textarea {
 			padding: 1.75em 1.75em 0.1em 1.75em ;
 			background-color: #353849;
 			border-radius: 5px;
-			margin: 1.5em 3em 1.5em 0;
-			width: calc(50% - 1.5em);
+			margin: 1.5em 2.5em 1.5em 0;
+			width: calc(50% - 3.5em);
 		}
 
 			.features article:nth-child(2n) {
@@ -3023,7 +3024,7 @@ input, select, textarea {
 			}
 
 			.features article .image {
-				border-radius: 5px 5px 0 0;
+				border-radius: 15px 15px 0 0;
 				display: block;
 				margin-bottom: 1.75em;
 				margin-left: -1.75em;

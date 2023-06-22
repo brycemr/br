@@ -80,6 +80,10 @@
 											<p>
 												I enjoy playing soccer, hiking, and learning foreign languages in my spare time.
 											</p>
+											<!--
+											<h3 class="major">What I'm Listening To on Apple Music</h3>
+											-->
+
 										</div>
 
 									</div>
@@ -116,6 +120,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				var apiUrl = 'https://api.music.apple.com/v1/me/recent/played/tracks';
+				fetch(apiUrl).then(response => {
+				  return response.json();
+				}).then(data => {
+				  // Work with JSON data here
+				  console.log(data);
+				}).catch(err => {
+				  // Do something for an error here
+				});
+			</script>
 
 	</body>
 </html>

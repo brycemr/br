@@ -50,20 +50,35 @@
 									</header>
 
 									<h3 class="major">Objective</h3>
-									<p>I am currently working with a team of 13 students to design a wind turbine to
-									compete in the Collegiate Wind Competition hosted by the Department of Energy. I am
-									working with a subteam of four students to design and create the control system for our
-									turbine. The control system must be able to adjust the pitch of the turbine blades, slow
-									the turbine to 10% of its maximum speed under emergency stop conditions, detect the
-									ambient wind temperature, and adjust a resistor load connected to the generator.
-									Meeting all of these objectives will allow us to regulate the power output of our turbine’s
-									generator and score well in the upcoming competition.
+									<p>I worked alongside a team of 13 students to design a wind turbine to
+									compete in the Collegiate Wind Competition hosted by the Department of Energy. I
+									worked with a subteam of four students to design and create the control system for our
+									turbine as well as a resistor relay to act as a dynamic load. The control system needed to be able to adjust the pitch of the turbine blades, slow
+									the turbine to 10% of its maximum speed under emergency stop conditions, detect a load disconnect, and adjust a resistor load connected to the generator.
+									By meeting all of these objectives we were able to regulate the power output of our turbine’s
+									generator and score well in the practice competitions we ran.
 									</p>
 
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="images/turbine_y_pitch.png" alt="" /></a>
-											<p>The current turbine prototype (left), and our current pitch system driven by a linear actuator (right).</p>
+											<a href="#" class="image"><img src="images/byu_team photo.jpeg" alt="" /></a>
+											<p>Brigham Young University 2023 Collegiate Wind Competition Team and Wind Energy Club.</p>
+										</article>
+									</section>
+
+									<h3 class="major">Technical Details</h3>
+									<p>We used an encoder to measure the RPM of our turbine, and used this in conjunction with a voltage divider to guide our controls. 
+										The data acquired was passed to an Arduino microcontroller and
+									used to regulate and update the states guiding the control of the turbine and load side
+									components. To regulate the power curve of the turbine, we designed a variable load that
+									incorporates a resistor array to maximize power generation at wind speeds from 5-11
+									m/s. A variable pitch system was used to ensure steady power from 11 m/s to 14 m/s and was
+									controlled by a linear actuator connected to out Arduino.
+									</p>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/turbine.jpg" alt="" /></a>
+											<p>The final turbine model for the competition.</p>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/power_curve.png" alt="" /></a>
@@ -71,30 +86,25 @@
 										</article>
 									</section>
 
-									<h3 class="major">Technical Details</h3>
-									<p>We use an encoder to measure the RPM of our turbine, a pitot tube connected to
-									a pressure sensor to monitor wind speed, and a voltage divider to monitor power output
-									and load connection. The data acquired is passed to an Arduino microcontroller and
-									used to regulate and update the states guiding the control of the turbine and load side
-									components. To regulate the power curve, we designed a variable load that
-									incorporates a resistor array to maximize power generation at wind speeds from 5-11
-									m/s. A variable pitch system will ensure steady power from 11 m/s to 14 m/s and will be
-									controlled by a linear actuator connected to an Arduino. We have already built the pitch
-									system and are currently prototyping the variable load design and testing the logic and
-									functionality of our state machine.
-									</p>
-
 									<h3 class="major">Results</h3>
-									<p>At the beginning of each month, we conduct a mock competition to check the
-									current state of our turbine and estimate the score we would receive in the real
-									competition. We have access to our university’s team results from the previous year, as
-									well as the scores received by the other universities that attended the competition last
-									year. We use these scores as benchmarks to help gauge the success of our turbine
-									prototype. Our current prototype has already improved upon the score our university’s
-									team received last year, and is able to achieve a coefficient of power near that of the
-									team that won the competition last year. In wind speeds of 11 m/s, our turbine is able to
-									produce 19.8 W of power with a coefficient of power of 0.152.
+									<p>
+										Our turbine's control system met all of the objectives we had for it during several test runs we conducted at the competition. We 
+										were able to successfully control the power output of the turbine and enter a shut down state when the load was disconnected from the power.
+										Unfortunately, during official testing there was a mechanical failure in a linkage arm, resulting in our generating decoupling from the main shaft.
+										This resulted in no power being generated for the rest of the test, so we were unable to determine the final score our controls system would have obtained.
+										However, even with this failure we were still able to place 7th in turbine testing out of 13 teams. Overall, I am satisfied with the improvements that we were 
+										able to make on last year's design, which had no controls system, and think that we are leaving next year's team a good starting point to build off of.
 									</p>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/cwc_Testing.jpg" alt="" /></a>
+											<p>Testing our control system at the competition.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/cwc_Scores.jpg" alt="" /></a>
+											<p>Final turbine testing competition score breakdowns for the 13 teams. BYU's score is located at the top of the list.</p>
+										</article>
+									</section>
 								</div>
 							</div>
 
