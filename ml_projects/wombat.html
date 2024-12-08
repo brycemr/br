@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<title>Story by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- One -->
+					<section class="banner style1 content-align-center onload-content-fade-right color5">
+						<div class="content">
+							<h1>E-Waste Disassembly and Sortation Pipeline</h1>
+						</div>
+					</section>
+                    <section class="wrapper style1 align-center">
+						<div class="inner">
+							<div class="row" style="justify-content: space-between;">
+								<section>
+									<i class="fa-solid fa-location-dot"></i>
+									<p>Carnegie Mellon University <br/> Pittsburgh, PA</p>
+								</section>
+								<section>
+									<span class="icon solid fas fa-calendar"></span>
+									<p>August 2023 - November 2024</p>
+								</section>
+								<section>
+									<span class="fas fa-compass-drafting"></span>
+									<p>Python, Computer Vision, ROS <br/>
+										Linux, System Integration</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in" id="first">
+						<div class="content">
+                            <h3>Introduction and Objective</h3>
+							<p class="minor">E-waste is the fastest-growing waste stream globally, with significant environmental and economic implications. 
+                                This project aims to develop an efficient and generalizable disassembly pipeline for smart devices to increase e-waste processing rates
+                                 and improve material recovery. The focus is on automating and enhancing the separation of components from devices like phones, tablets,
+                                  and smartwatches, contributing to sustainable e-waste recycling practices.
+								
+								<br/><br/>
+								The scope of the project involved the entire dissasembly pipeline from the initial reception of an end-of-life device, through the device's 
+								classification and dissasembly, to the final sorting of liberated components on a conveyor belt. I worked with a team of researchers to develop
+								a robust pipeline, and I was primarily in charge of the development and integration of the sorting system.
+								</p>
+						</div>
+						<div class="image">
+							<a href="https://pirg.org/edfund/articles/what-is-e-waste/">
+								<img src="../images/ewaste.jpg" alt="" />
+							</a>
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-right content-align-left image-position-left onload-image-fade-in" id="first">
+						<div class="content">
+                            <h3>Methods and Technical Details</h3>
+							<p class="minor">I developed the sortation station’s detection and sorting systems, integrating machine learning, computer vision, and robotics
+								to automate the disassembly pipeline. I transitioned the component detection system from a U-Net-based segmentation model to YOLOv8
+								 for real-time instance segmentation, improving accuracy and speed in identifying components once liberated from devices. This system was 
+								 integrated with a SCARA robot, which used a controlled suction mechanism to sort components onto a conveyor.
+								<br/><br/>
+								I designed and implemented a custom ROS program to synchronize the detection system, robotic arm, and conveyor belt, ensuring seamless 
+								coordination. I also led the selection of the camera model and system layout to optimize visual capture of components. 
+								Additionally, I created an annotation tool leveraging Meta’s SAM to quickly generate segmentation masks for training, then collected and 
+								labeled data for training and compared the performance of multiple object detection models, including YOLO and Mask-RCNN.
+								</p>
+						</div>
+						<div class="image">
+							<img src="../images/sorting_crop.jpeg" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in" id="first">
+						<div class="content">
+                            <h3>Results and Evaluation</h3>
+							<p class="minor">While no specific metrics are available, initial tests showed that the system performed reliably in component identification
+								 and sorting across a variety of devices. The integration of YOLOv8 improved the real-time instance segmentation process, making it faster 
+								 and more accurate in recognizing individual components. However, challenges remained with component gripping, particularly when components 
+								 were deformed or had complex shapes, which sometimes led to missed components.</p>
+						</div>
+					</section>
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in" id="first">
+						<div class="content">
+                            <video controls>
+								<source src="../images/Sorting Video.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</section>
+
+				<!-- Five -->
+					<!-- 
+						<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Media Gallery</h2>
+						</div>
+
+							<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="images/sorting.jpeg" class="image">
+										<img src="images/sorting.jpeg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Recycling Automation</h3>
+										<p>As part of my research in the Biorobotics Lab at Carnegie Mellon, I worked on a project to develop a system for automated e-waste collection. I 
+											primarily worked on a sub-system to identify and sort liberated components from e-waste.
+										</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="mech_eng_projects/cwc.html" class="image">
+										<img src="images/gallery/thumbs/turbine.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Mock Offshore Wind Turbine</h3>
+										<p>I worked alongside a team of 13 students to design a wind turbine to
+											compete in the Collegiate Wind Competition hosted by the Department of Energy.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/09.jpg" class="image">
+										<img src="images/gallery/thumbs/simple_farm.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Offshore Wind Farm Optimization</h3>
+										<p>As a member of BYU's FLOW Lab, I developed optimization tools using Julia to aid in the design of offshore wind farm turbine layout. 
+											These tools allowed optimizations to factor in costs incurred by varying foundations costs and the ocean depth.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="" class="image">
+										<img src="images/gallery/thumbs/rl-agent.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Infant Motion with Reinforcment Learning</h3>
+										<p>During the Fall '22 semester of my undergraduate degree, I modeled an infant in the Unity Game Engine and taught it to roll over using Reinforcment Learning.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="" class="image">
+										<img src="images/gallery/thumbs/game.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Puzzle Video Game</h3>
+										<p>As a personal project I have developed a C# based demo for a 3D puzzle game in the Unity game engine.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="" class="image">
+										<img src="images/gallery/thumbs/grocery.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Walmart Grocery Order Automation</h3>
+										<p>For this project, I wanted to build a tool to help simplify the process of selecting
+											meals to cook for a week by automating the ordering of necessary ingredients for a
+											given recipe.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+
+					</section> -->
+
+				<!-- Footer -->
+				<footer class="wrapper style1 align-center">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="../index.html" class="style2 fas fa-solid fa-house"><span class="label"></span></a></li>
+							<li><a href="https://github.com/brycemr" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+							<li><a href="www.linkedin.com/in/bryce-richard" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:brycerichard26@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,142 +1,181 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Offshore Wind Farm Optimization</title>
+		<title>Wind Turbine Control System</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 	</head>
 	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="me_en_projects.html">Mechanical Engineering Experience</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+				<!-- One -->
+					<section class="banner style1 content-align-center onload-content-fade-right color5">
+						<div class="content">
+							<h1>Collegiate Wind Competition: Wind Turbine Control System</h1>
+						</div>
+					</section>
+                    <section class="wrapper style1 align-center">
+						<div class="inner">
+							<div class="row" style="justify-content: space-between;">
+								<section>
+									<i class="fa-solid fa-location-dot"></i>
+									<p>Brigham Young University <br/> Provo, UT</p>
+								</section>
+								<section>
+									<span class="icon solid fas fa-calendar"></span>
+									<p>August 2022 - June 2023</p>
+								</section>
+								<section>
+									<span class="fas fa-compass-drafting"></span>
+									<p>Arduino, Controls, Circuit Design,<br>
+										Teamwork</p>
+								</section>
+							</div>
+						</div>
+					</section>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<div class="inner">
-						<h2>Menu</h2>
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="cs_projects.html">Computer Science Experience</a></li>
-							<li><a href="me_en_projects.html">Mechanical Engineering Experience</a></li>
-							<li><a href="about.html">About Me</a></li>
-						</ul>
-						<a href="#" class="close">Close</a>
-					</div>
-				</nav>
+				<!-- Two -->
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in" id="shorten">
+						<div class="content">
+                            <h3>Introduction and Objective</h3>
+							<p class="minor">This project focused on designing and implementing a wind turbine control system for Brigham Young University’s 
+								entry in the Department of Energy’s Collegiate Wind Competition. I worked with a team of 13, specifically working in a subteam 
+								of four to develop a control system and dynamic load relay that enabled precise power management under variable conditions. 
+								The control system achieved power regulation by adjusting blade pitch, executing emergency stops, and managing load connectivity.
+								</p>
+						</div>
+						<div class="image">
+							<img src="../images/byu_team photo.jpeg" alt="" />
+						</div>
+					</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+					<section class="spotlight style1 orient-right content-align-left image-position-left onload-image-fade-in" id="first">
+						<div class="content">
+							<br>
+                            <h3>Methods and Technical Details</h3>
+							<p class="minor">The control system incorporated an encoder to measure RPM and a voltage divider to provide real-time feedback to an Arduino microcontroller. 
+								Our system utilized a resistor array for dynamic load control, optimizing power output at wind speeds from 5-11 m/s. For stability in higher-speed conditions 
+								(11-14 m/s), we implemented a variable pitch system controlled via a linear actuator connected to the Arduino, ensuring steady power generation across a 
+								broad wind range.
+								<br>
+								The turbine control system and power circuit had to follow strict competition guidelines, including safety and reliability requirements. As part of these requirements 
+								The control system needed to be able to adjust the pitch of the turbine blades, slow the turbine to 10% of its maximum speed under emergency stop conditions, 
+								and detect if the turbine was disconnected from the power load. Our turbine control components also had to be optically isolated from the controller, which was located outside the turbine.
+								I worked with the controls subteam to ensure that our system fully met all the competition requirements. 
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-									<header>
-									<h2>Collegiate Wind Competition</h2>
-									</header>
+							</p>
+								<br>
+						</div>
+						<span class="image">
+							<img src="../images/cwc_Testing.jpg" alt="" />
+						</span>
+					</section>
 
-									<h3 class="major">Objective</h3>
-									<p>I worked alongside a team of 13 students to design a wind turbine to
-									compete in the Collegiate Wind Competition hosted by the Department of Energy. I
-									worked with a subteam of four students to design and create the control system for our
-									turbine as well as a resistor relay to act as a dynamic load. The control system needed to be able to adjust the pitch of the turbine blades, slow
-									the turbine to 10% of its maximum speed under emergency stop conditions, detect a load disconnect, and adjust a resistor load connected to the generator.
-									By meeting all of these objectives we were able to regulate the power output of our turbine’s
-									generator and score well in the practice competitions we ran.
-									</p>
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in row" id="first">
+						<div class="content">
+							<br>
+							<br>
+                            <h3>Results and Evaluation</h3>
+							<p class="minor">The developed control system met all test objectives, including dynamic power regulation and emergency response. 
+								However, during official testing, a mechanical failure caused the generator to decouple from the turbine shaft, resulting in a complete power loss 
+								for the remainder of the event. Despite this setback, our team placed 7th out of 13 competitors, an improvement from previous years. 
+								This iteration introduced a new control system that laid a foundation for future teams to build upon, marking significant progress 
+								toward a competitive turbine design.</p>
+						</div>
+						<div class="image">
+							<img src="../images/cwc_Scores.jpg" alt="" />
+						</div>
+					</section>
 
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/byu_team photo.jpeg" alt="" /></a>
-											<p>Brigham Young University 2023 Collegiate Wind Competition Team and Wind Energy Club.</p>
-										</article>
-									</section>
+				<!-- Five -->
+					
+						<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Media Gallery</h2>
+						</div>
 
-									<h3 class="major">Technical Details</h3>
-									<p>We used an encoder to measure the RPM of our turbine, and used this in conjunction with a voltage divider to guide our controls. 
-										The data acquired was passed to an Arduino microcontroller and
-									used to regulate and update the states guiding the control of the turbine and load side
-									components. To regulate the power curve of the turbine, we designed a variable load that
-									incorporates a resistor array to maximize power generation at wind speeds from 5-11
-									m/s. A variable pitch system was used to ensure steady power from 11 m/s to 14 m/s and was
-									controlled by a linear actuator connected to out Arduino.
-									</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/turbine.jpg" alt="" /></a>
-											<p>The final turbine model for the competition.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/power_curve.png" alt="" /></a>
-											<p>Turbine power output plotted against wind speed for our current turbine, the last year’s winning team (Kansas State), and our university’s turbine at last year’s competition.</p>
-										</article>
-									</section>
-
-									<h3 class="major">Results</h3>
-									<p>
-										Our turbine's control system met all of the objectives we had for it during several test runs we conducted at the competition. We 
-										were able to successfully control the power output of the turbine and enter a shut down state when the load was disconnected from the power.
-										Unfortunately, during official testing there was a mechanical failure in a linkage arm, resulting in our generating decoupling from the main shaft.
-										This resulted in no power being generated for the rest of the test, so we were unable to determine the final score our controls system would have obtained.
-										However, even with this failure we were still able to place 7th in turbine testing out of 13 teams. Overall, I am satisfied with the improvements that we were 
-										able to make on last year's design, which had no controls system, and think that we are leaving next year's team a good starting point to build off of.
-									</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/cwc_Testing.jpg" alt="" /></a>
-											<p>Testing our control system at the competition.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/cwc_Scores.jpg" alt="" /></a>
-											<p>Final turbine testing competition score breakdowns for the 13 teams. BYU's score is located at the top of the list.</p>
-										</article>
-									</section>
-								</div>
+							<div class="gallery style2 medium lightbox onload-fade-in">
+								<article>
+									<a href="../images/power_curve.png"class="image">
+										<img src="../images/power_curve.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Turbine Power Curve</h3>
+										<p>In testing our turbine control system paired with an improved blade design was able to significantly increase power output compared
+											to the previous year's iteration.
+										</p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/turbine_w_pitch.png" class="image">
+										<img src="../images/turbine_w_pitch.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Mock Offshore Turbine</h3>
+										<p>Our mock turbine featured a variable pitch system, controlled by a linear actuator.</p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/cwc_Testing.jpg" class="image">
+										<img src="../images/cwc_Testing.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Collegiate Wind Competition Testing</h3>
+										<p>We were given two opportunities to test our turbine at the competition, which took place in Boulder, Colorado.</p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/cwc_Scores.jpg" class="image">
+										<img src="../images/cwc_Scores.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Wind Competition Results</h3>
+										<p>Our team placed 7th out of 13 competitors. My work on the controls subteam directly contributed to our
+											scores in the power curve, control, and safety categories. </p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/byu_team photo.jpeg" class="image">
+										<img src="../images/byu_team photo.jpeg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Team Photo</h3>
+										<p>Our team consisted of 13 students from a mix of Mechanical, Electrical, and Computer Engineering. The controls
+											subteam was made up of three Mechanical Engineering and one Computer Engineering students.
+										</p>
+									</div>
+								</article>
 							</div>
 
 					</section>
 
-					<!-- Footer -->
-					<section id="footer">
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>I do not have many social media accounts, but feel free to reach out if you would like to know more or want to collaborate!</p>
-							<ul class="contact">
-								<li class="icon solid fa-envelope"><a href="mailto:brycerichard26@gmail.com">brycerichard26@gmail.com</a></li>
-								<li class="icon brands fa-github"><a target="_blank" href="https://github.com/brycemr">brycemr</a></li>
-								<li class="icon brands fa-linkedin"><a target="_blank" href="https://www.linkedin.com/in/bryce-richard-8a7a69179/">Bryce Richard</a></li>
-								<li class="icon solid fa-home">Provo, UT </li>
-								<li class="icon solid fa-phone">(385) 233-7360</li>
+							<ul class="icons">
+								<li><a href="../index.html" class="style2 fas fa-solid fa-house"><span class="label"></span></a></li>
+								<li><a href="https://github.com/brycemr" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+								<li><a href="www.linkedin.com/in/bryce-richard" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:brycerichard26@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
-					</section>
+					</footer>
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

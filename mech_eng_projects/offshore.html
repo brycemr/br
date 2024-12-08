@@ -1,149 +1,175 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Offshore Wind Farm Optimization</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 	</head>
 	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="cs_projects.html">Computer Science Projects </a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+				<!-- One -->
+					<section class="banner style1 content-align-center onload-content-fade-right color5">
+						<div class="content">
+							<h1>Offshore Wind Farm Optimization</h1>
+						</div>
+					</section>
+                    <section class="wrapper style1 align-center">
+						<div class="inner">
+							<div class="row" style="justify-content: space-between;">
+								<section>
+									<i class="fa-solid fa-location-dot"></i>
+									<p>Brigham Young University <br/> Provo, UT</p>
+								</section>
+								<section>
+									<span class="icon solid fas fa-calendar"></span>
+									<p>August 2022 - May 2023</p>
+								</section>
+								<section>
+									<span class="fas fa-compass-drafting"></span>
+									<p>Julia, Optimization,<br>
+										Non-Linear Programming</p>
+								</section>
+							</div>
+						</div>
+					</section>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<div class="inner">
-						<h2>Menu</h2>
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="cs_projects.html">Computer Science Experience</a></li>
-							<li><a href="me_en_projects.html">Mechanical Engineering Experience</a></li>
-							<li><a href="about.html">About Me</a></li>
-						</ul>
-						<a href="#" class="close">Close</a>
-					</div>
-				</nav>
+				<!-- Two -->
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in" id="shorten">
+						<div class="content">
+                            <h3>Introduction and Objective</h3>
+							<p class="minor">This project aimed to develop a tool that optimizes turbine layout in offshore wind farms to minimize the Levelized Cost of Energy (LCOE). 
+								As part of my role in Brigham Young University’s FLOW Lab, I designed and implemented an optimizer that considers wind speed, wind direction, and 
+								water depth—each impacting power output and foundation costs. By refining turbine positioning, the tool achieved substantial 
+								reductions in LCOE across various depth profiles.
+								</p>
+						</div>
+						<div class="image">
+							<a href="https://flow.byu.edu/"">
+								<img src="../images/flow_lab.jpg" alt="" />
+							</a>
+						</div>
+					</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+					<section class="spotlight style1 orient-right content-align-left image-position-left onload-image-fade-in" id="first">
+						<div class="content">
+							<br>
+                            <h3>Methods and Technical Details</h3>
+							<p class="minor">The optimizer was coded in Julia using the BYU FLOW Lab's FLOWFarm and SNOW libraries, which support non-linear optimization and turbine property calculations. 
+								To address offshore-specific challenges, I expanded these libraries with functions that dynamically calculate monopile foundation costs based on turbine depth, wind loads, 
+								and material properties. This enhancement involved determining monopile dimensions according to depth and steel yield stress, which allowed for accurate cost estimation 
+								based on material mass. The optimization used a gradient descent approach with automatic differentiation, iteratively reducing LCOE by adjusting turbine placements to identify an optimal configuration.
+							</p>
+						</div>
+						<span class="image">
+							<img src="../images/farm1 - Copy.png" alt="" />
+						</span>
+					</section>
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in row" id="first">
+						<div class="content">
+							<br>
+							<br>
+                            <h3>Results and Evaluation</h3>
+							<p class="minor">The optimizer consistently reduced LCOE by 7-10% across different test cases:
+								<ul>
+									<li>Depths 10-60m: Reduced LCOE from $200.9/MWh to $182.9/MWh (8.99% decrease)</li>
+									<li>Depths 10-30m: Reduced LCOE from $183.4/MWh to $166.4/MWh (9.26% decrease)</li>
+									<li>Depths 10-60m: (Alternate Test): Reduced LCOE from $192.3/MWh to $177.3/MWh (7.81% decrease)</li>
+								</ul>
+								
+								These results were validated by comparing the calculated LCOE to values in a National Renewable Energy Laboratory study, 
+								achieving less than 3% variance.
+								</p>
+						</div>
+						<div class="image">
+							<img src="../images/farm4 - Copy.png" alt="" />
+						</div>
+					</section>
 
-									<header>
-											<h2>Offshore Wind Farm Optimization</h2>
-									</header>
+				<!-- Five -->
+					
+						<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Media Gallery</h2>
+						</div>
 
-									<h3 class="major">Objective</h3>
-									<p>As a research assistant in Brigham Young University’s FLOW Lab, I was tasked
-									with creating an optimization tool for offshore wind farms that optimizes a wind farm by
-									adjusting the positioning of the turbines. Adjusting the layout of the wind farm affects the
-									<b> Levelized Cost of Energy (LCOE) </b>, which the optimizer should minimize. The LCOE for
-									any given layout of wind turbines should take into account the effect of wind speed,
-									wind direction, and water depth on power output for the wind farm. The factors will also
-									affect the material cost for a monopile foundation. This tool should also be able to
-									create and plot a variety of depth profiles for testing their effects on the resultant
-									optimized wind farm layout.
-									</p>
-
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/farm1.png" alt="" /></a>
-											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 60 meters. Initial LCOE of wind farm (White): 200.9 $/MWh. Optimized LCOE of wind farm (Green): 182.9 $/MWh. The optimizer improved the LCOE by 8.99% </p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/farm2.png" alt="" /></a>
-											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 30 meters. Initial LCOE of wind farm (White): 183.4 $/MWh. Optimized LCOE of wind farm (Green): 166.4 $/MWh. The optimizer improved the LCOE by 9.26% </p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/farm3.png" alt="" /></a>
-											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 60 meters. Initial LCOE of wind farm (White): 192.3 $/MWh. Optimized LCOE of wind farm (Green): 177.3 $/MWh. The optimizer improved the LCOE by 7.81% </p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/farm4.png" alt="" /></a>
-											<p>Offshore Wind Farm layout optimization for depths varying from 10 to 60 meters. Initial LCOE of wind farm (White): 196.7 $/MWh. Optimized LCOE of wind farm (Green): 177.0 $/MWh. The optimizer improved the LCOE by 10.0% </p>
-										</article>
-									</section>
-
-									<h3 class="major">Technical Details</h3>
-									<p>I programmed this optimizer in Julia, using the FLOWFarm and SNOW libraries
-									from Brigham Young University’s FLOW Lab. These libraries have built-in functions for
-									performing sparse non-linear optimizations and calculating important properties related
-									to wind farms, such as wake interference between turbines and annual energy
-									production. These libraries do not currently have methods for dynamically calculating
-									the foundation costs for the turbines in an offshore wind farm, so I created functions to
-									generate different depth patterns and calculate the cost of a turbine’s monopile
-									foundation given a specified depth, wind speed, turbine dimensions, and yield stress. To
-									estimate the cost of the monopile, the program calculates the diameter and thickness of
-									the monopile based on the yield stress of steel and the largest bending moment caused
-									by the wind load on the turbine, factoring in the length of the beam required for a given
-									depth. The beam's diameter, thickness, and length can then be used to find the beam's
-									mass, which can then be converted into a cost and used in the optimization of the
-									LCOE. The optimization is performed using a gradient-based descent and automatic
-									differentiation to find the most favorable action for the optimizer to take in each iteration.
-									</p>
-
-									<h3 class="major">Results</h3>
-									<p>The functions that I created to calculate the Levelized Cost of Energy for an
-									offshore wind farm, taking into account the monopile foundation costs under varying
-									conditions, were validated as my model returned values within 3% of those found in a
-									paper published by the National Renewable Energy Laboratory that I based my
-									monopile modeling approach on. The 3% variance can be accounted for by slight
-									differences in their assumptions for the cost of the tower and wind data compared to the
-									values assumed in my model. My optimizer was also successful in the main objective of
-									decreasing the LCOE. For the initial test state with a constant depth of 23.5m, the
-									optimizer improved the LCOE of the wind farm by 8.45%. When running tests with
-									several depth patterns varying from 10 to 60m, the optimizer improved the LCOE by
-									8.99% on average. The Julia code I developed can be found on my Github.
-									</p>
-								</div>
+							<div class="gallery style2 medium lightbox onload-fade-in">
+								<article>
+									<a href="../images/farm1.png" class="image">
+										<img src="../images/farm1.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Optimization Result</h3>
+										<p>An example optimization output. The original layout can be seen in white, the optimized layout is represented
+											in green.
+										</p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/farm2.png" class="image">
+										<img src="../images/farm2.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Optimization Result</h3>
+										<p>An example optimization output. The original layout can be seen in white, the optimized layout is represented
+											in green.
+										</p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/farm3.png" class="image">
+										<img src="../images/farm3.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Optimization Result</h3>
+										<p>An example optimization output. The original layout can be seen in white, the optimized layout is represented
+											in green.
+										</p>
+									</div>
+								</article>
+								<article>
+									<a href="../images/farm4.png" class="image">
+										<img src="../images/farm4.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Optimization Result</h3>
+										<p>An example optimization output. The original layout can be seen in white, the optimized layout is represented
+											in green.
+										</p>
+									</div>
+								</article>
 							</div>
 
 					</section>
 
-					<!-- Footer -->
-					<section id="footer">
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>I do not have many social media accounts, but feel free to reach out if you would like to know more or want to collaborate!</p>
-							<ul class="contact">
-								<li class="icon solid fa-envelope"><a href="mailto:brycerichard26@gmail.com">brycerichard26@gmail.com</a></li>
-								<li class="icon brands fa-github"><a target="_blank" href="https://github.com/brycemr">brycemr</a></li>
-								<li class="icon brands fa-linkedin"><a target="_blank" href="https://www.linkedin.com/in/bryce-richard-8a7a69179/">Bryce Richard</a></li>
-								<li class="icon solid fa-home">Provo, UT </li>
-								<li class="icon solid fa-phone">(385) 233-7360</li>
+							<ul class="icons">
+								<li><a href="../index.html" class="style2 fas fa-solid fa-house"><span class="label"></span></a></li>
+								<li><a href="https://github.com/brycemr" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+								<li><a href="www.linkedin.com/in/bryce-richard" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:brycerichard26@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
-					</section>
+					</footer>
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

@@ -1,143 +1,216 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Reinforcement Learning Agent</title>
+		<title>Story by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 	</head>
 	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="cs_projects.html">Computer Science Projects</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-				<nav id="menu">
-					<div class="inner">
-						<h2>Menu</h2>
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="cs_projects.html">Computer Science Experience</a></li>
-							<li><a href="me_en_projects.html">Mechanical Engineering Experience</a></li>
-							<li><a href="about.html">About Me</a></li>
-						</ul>
-						<a href="#" class="close">Close</a>
-					</div>
-				</nav>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-									<header>
-									<h2>REINFORCEMENT LEARNING MODEL FOR INFANT ROLLING</h2>
-									</header>
-
-									<h3 class="major">Objective</h3>
-									<p>As part of a Neuromechanics of Movement course, I wanted to explore how
-									human infants learn to roll over by training a reinforcement learning agent. This required
-									creating a simple model of a human infant for the reinforcement learning agent to
-									control and specifying the possible actions of the agents so they could learn to roll over.
-									</p>
-
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/rl-agent.png" alt="" /></a>
-											<p>Infant model created to be controlled by the reinforcement learning agent. The agent observes the rotation of each limb as well as the rotation of the torso and the y position of the blue marker. The actions available to the agent allow it to decide the direction and level of torque to apply to each limb as well as which axis to rotate the arm about. The leg joints were modeled as hinge joints, only allowing for flexion and extension.</p>
-										</article>
-										<article>
-											<a href="https://youtu.be/d4bKRz-_9_E" class="image"><img src="images/vid_still.png" alt="" /></a>
-											<p>Click the above image to view a short video showing the end of agent training. This reinforcement learning agent is attempting to roll over the infant model. A green square represents the agent was successful during the last episode, a red square indicates failure.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/tensor.png" alt="" /></a>
-											<p>Top: The cumulative reward of the 16 environments controlled by the agent running in parallel is plotted on the y-axis, and the total number of steps that the agent has taken is plotted on the x-axis. This shows that as the training progresses the agent continues to improve its ability to roll over.
-												Bottom: The average learning episode length in number of steps is plotted on the y-axis, and the total number of steps that the agent has taken so far is plotted on the x-axis. This shows that as the training progresses the agent is learning to roll over quicker as a learning episode terminates when the agent succeeds.
-											</p>
-										</article>
-									</section>
-
-									<h3 class="major">Technical Details</h3>
-									<p>I created the model for the infant, and trained the reinforcement learning agent, in
-									the Unity game engine. This allowed me to use the Unity Machine Learning Agents Toolkit
-									(ML-Agents) package which uses Python to run a deep reinforcement learning algorithm
-									that uses Unity as the learning environment. For the agent to learn, it needs to take action,
-									make observations about the environment, and receive a reward or punishment based on
-									its state. My agent was given four continuous actions to choose from for its limbs and chose
-									the corresponding amount of torque to apply for these actions. The agent was also given
-									two discrete actions to determine the axis of rotation for the arms. After each step, the agent
-									would make eight observations to determine the rotation of its limbs, torso, and the vertical
-									position of a marker on its chest. These observations were pertaining to the rotation of its
-									limbs, torso, and the position of the marker. If the agent rolled over completely, and the
-									marker touched the floor, it would be given a large reward in addition to the time remaining
-									on a 30-second timer. If the timer terminated before the agent was able to roll over, it would
-									receive a score determined by the position of the marker, with the reward increasing as the
-									marker approached the floor. These actions, observations, and rewards were handled by
-									C# scripts that I developed. The scripts turned the actions selected by the agent into limb
-									torques, and then returned the observations and reward values back to the agent.
-									</p>
-
-									<h3 class="major">Results</h3>
-									<p>The reinforcement learning agent that I trained met my primary goal and was
-									successful in learning to roll over. It also exhibited a rolling pattern similar to those seen in
-									human infants, as it synchronously used its limbs to rotate its torso. However, the learning
-									of this agent was not as stable as I would have hoped. I believe this was in part due to the
-									limb control that the agent had access to in the C# scripts I developed. The limb control was
-									difficult for a human to learn and in future development, I would like to modify the control to
-									make the same actions result in more consistent movements across different arm postures.
-									I would also want to attempt to address the issues with stability by experimenting with
-									changes to the configuration of the reinforcement learning algorithm, as well as changes to
-									the actions and observations that the agent makes.
-									</p>
-
-								</div>
-							</div>
-
-					</section>
-
-					<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>I do not have many social media accounts, but feel free to reach out if you would like to know more or want to collaborate!</p>
-							<ul class="contact">
-								<li class="icon solid fa-envelope"><a href="mailto:brycerichard26@gmail.com">brycerichard26@gmail.com</a></li>
-								<li class="icon brands fa-github"><a target="_blank" href="https://github.com/brycemr">brycemr</a></li>
-								<li class="icon brands fa-linkedin"><a target="_blank" href="https://www.linkedin.com/in/bryce-richard-8a7a69179/">Bryce Richard</a></li>
-								<li class="icon solid fa-home">Provo, UT </li>
-								<li class="icon solid fa-phone">(385) 233-7360</li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+				<!-- One -->
+					<section class="banner style1 content-align-center onload-content-fade-right color5">
+						<div class="content">
+							<h1>Reinforcement Learning Model for Infant Rolling</h1>
 						</div>
 					</section>
+                    <section class="wrapper style1 align-center">
+						<div class="inner">
+							<div class="row" style="justify-content: space-between;">
+								<section>
+									<i class="fa-solid fa-location-dot"></i>
+									<p>Brigham Young University <br/> Provo, UT</p>
+								</section>
+								<section>
+									<span class="icon solid fas fa-calendar"></span>
+									<p>November 2022 <br/> (Fall Semester)</p>
+								</section>
+								<section>
+									<span class="fas fa-compass-drafting"></span>
+									<p>Machine Learning, C#,  <br>
+										Unity Game Engine</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in" id="shorten">
+						<div class="content">
+                            <h3>Introduction and Objective</h3>
+							<p class="minor">As part of a Neuromechanics of Movement course, I wanted to explore how human infants learn to roll 
+								over by training a reinforcement learning agent. This project involved creating a simplified model of a human infant 
+								that the agent could control. The goal was to emulate how infants learn through trial and error, akin to reinforcement learning, where 
+								feedback from the environment shapes behavior over time. This analogy highlights the parallels between biological learning 
+								processes and artificial intelligence, as both rely on gradual optimization of actions to achieve desired outcomes.
+								</p>
+						</div>
+						<div class="image">
+							<img src="../images/vid_still.png" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-right content-align-left image-position-left onload-image-fade-in" id="first">
+						<div class="content">
+							<br>
+                            <h3>Methods and Technical Details</h3>
+							<p class="minor">I developed the infant model and trained the reinforcement learning agent within the Unity game engine, 
+								leveraging the Unity ML-Agents Toolkit. This setup allowed Python-based deep reinforcement learning to interact with 
+								Unity as the environment. I scripted the agent’s actions, observations, and rewards in C#, providing four continuous 
+								action options for limb torque and two discrete actions for arm rotation axis selection. The agent made eight observations 
+								per step, tracking limb and torso rotations and chest marker height. Rewards were structured to encourage complete rollovers 
+								within a 30-second window, with partial rewards based on marker proximity to the floor when the timer elapsed.</p>
+								<br>
+						</div>
+						<span class="image">
+							<img src="../images/rl-agent.png" alt="" />
+						</span>
+					</section>
+
+					<section class="spotlight style1 orient-left content-align-left image-position-right onload-image-fade-in row" id="first">
+						<div class="content">
+							<br>
+							<br>
+                            <h3>Results and Evaluation</h3>
+							<p class="minor">The agent successfully learned to roll over, achieving a primary project goal. Its movement patterns 
+								resembled human infant rolling, synchronizing limb movements to generate torso rotation. However, training stability 
+								was a challenge, likely due to control sensitivity in the limb scripts. In future work, I would improve consistency in 
+								movement by refining control responses and experimenting with algorithm configurations. Adjustments to the agent’s 
+								available actions and observations may further enhance training stability</p>
+								<br>
+								<br>
+								<br>
+						</div>
+						<div class="image">
+							<img src="../images/tensor.png" alt="" />
+						</div>
+					</section>
+					<section class="spotlight style1 orient-left content-align-center image-position-right onload-image-fade-in" id="first">
+						<div class="content">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/d4bKRz-_9_E?si=YIcuM38z1lh-RMVl" 
+							title="YouTube video player" frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
+					</section>
+
+				<!-- Five -->
+					<!-- 
+						<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Media Gallery</h2>
+						</div>
+
+							<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="images/sorting.jpeg" class="image">
+										<img src="images/sorting.jpeg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Recycling Automation</h3>
+										<p>As part of my research in the Biorobotics Lab at Carnegie Mellon, I worked on a project to develop a system for automated e-waste collection. I 
+											primarily worked on a sub-system to identify and sort liberated components from e-waste.
+										</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="mech_eng_projects/cwc.html" class="image">
+										<img src="images/gallery/thumbs/turbine.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Mock Offshore Wind Turbine</h3>
+										<p>I worked alongside a team of 13 students to design a wind turbine to
+											compete in the Collegiate Wind Competition hosted by the Department of Energy.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/09.jpg" class="image">
+										<img src="images/gallery/thumbs/simple_farm.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Offshore Wind Farm Optimization</h3>
+										<p>As a member of BYU's FLOW Lab, I developed optimization tools using Julia to aid in the design of offshore wind farm turbine layout. 
+											These tools allowed optimizations to factor in costs incurred by varying foundations costs and the ocean depth.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="" class="image">
+										<img src="images/gallery/thumbs/rl-agent.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Infant Motion with Reinforcment Learning</h3>
+										<p>During the Fall '22 semester of my undergraduate degree, I modeled an infant in the Unity Game Engine and taught it to roll over using Reinforcment Learning.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="" class="image">
+										<img src="images/gallery/thumbs/game.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Puzzle Video Game</h3>
+										<p>As a personal project I have developed a C# based demo for a 3D puzzle game in the Unity game engine.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="" class="image">
+										<img src="images/gallery/thumbs/grocery.png" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Walmart Grocery Order Automation</h3>
+										<p>For this project, I wanted to build a tool to help simplify the process of selecting
+											meals to cook for a week by automating the ordering of necessary ingredients for a
+											given recipe.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+
+					</section> -->
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="../index.html" class="style2 fas fa-solid fa-house"><span class="label"></span></a></li>
+								<li><a href="https://github.com/brycemr" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+								<li><a href="www.linkedin.com/in/bryce-richard" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:brycerichard26@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
