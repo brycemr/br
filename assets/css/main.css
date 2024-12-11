@@ -8615,3 +8615,79 @@ height: 100%; /* Scale video to fit the height */
 object-fit: cover; /* Ensure the video covers the area while maintaining its aspect ratio */
 }
 
+.floating-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.floating-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.floating-menu .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.floating-menu a:hover {
+    color: #00bcd4;
+}
+
+.dropdown-content .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Spacing between items */
+}
+
+.project-grid a {
+    flex: 1 1 45%; /* Makes each item take up 45% of the container width */
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-grid a:hover {
+    background-color: #575757;
+}
