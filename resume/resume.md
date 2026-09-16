@@ -28,8 +28,7 @@ services. Models run in the cloud and on NPUs mounted to poles on live interstat
 - Built the **vision-based vehicle triggering system** that replaces in-road induction
   loops: detection on a Hailo NPU feeding a multi-frame tracker that maintains vehicle
   identity across frames and decides when a vehicle has been fully captured. **0.10%
-  unrecoverable miss rate at 4.9% false-positive inflation** over 4,791 ground-truth
-  vehicles; 0.874 / 0.968 precision-recall on the device-faithful benchmark.
+  unrecoverable miss rate at 4.9% false-positive inflation**.
 - Built **projective-geometry lane registration** that keeps each camera's stored lane
   model aligned as poles shake and cameras drift — vanishing-point and anchor
   optimization against segmented lane markings. Recovered lane coverage from **0% to
