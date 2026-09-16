@@ -34,7 +34,7 @@ services. Models run in the cloud and on NPUs mounted to poles on live interstat
   model aligned as poles shake and cameras drift — vanishing-point and anchor
   optimization against segmented lane markings. Recovered lane coverage from **0% to
   76%** on a drifted corridor; tracked camera motion to **1–3 px through 3° of
-  rotation at ~15 ms/frame on CPU**, validated against real footage from 46 cameras.
+  rotation at ~15 ms/frame on CPU**, validated on real roadside footage.
 - Built **axle counting as a multi-view fusion problem**: per-frame wheel detections
   from several cameras projected into a single virtual chassis per vehicle trip, with
   RANSAC outlier rejection and density clustering over the fused representation.
