@@ -1,0 +1,132 @@
+/* Print-first resume stylesheet. Letter page, tuned to keep the whole
+   document on one page. */
+
+@page {
+  size: letter;
+  margin: 0.4in 0.5in;
+}
+
+:root {
+  --ink: #16181d;
+  --muted: #5a6170;
+  --rule: #c9cdd6;
+  --accent: #1f3a5f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  font-family: "Charter", "Georgia", "Times New Roman", serif;
+  font-size: 9.0pt;
+  line-height: 1.22;
+  color: var(--ink);
+}
+
+header {
+  text-align: center;
+  padding-bottom: 5pt;
+  border-bottom: 1.4pt solid var(--accent);
+  margin-bottom: 7pt;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20pt;
+  font-weight: 700;
+  letter-spacing: 0.4pt;
+  color: var(--accent);
+}
+
+.tagline {
+  margin: 2.5pt 0 0;
+  font-size: 9.4pt;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.contact {
+  margin: 4pt 0 0;
+  font-size: 8.9pt;
+  color: var(--muted);
+}
+
+.contact .sep {
+  padding: 0 5pt;
+  color: var(--rule);
+}
+
+.contact a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+h2 {
+  margin: 6.5pt 0 2.5pt;
+  font-size: 10.2pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1pt;
+  color: var(--accent);
+  border-bottom: 0.6pt solid var(--rule);
+  padding-bottom: 2pt;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h3 {
+  margin: 5.5pt 0 0;
+  font-size: 10pt;
+  font-weight: 700;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h2 + h3 {
+  margin-top: 3pt;
+}
+
+.meta {
+  margin: 0.5pt 0 2.5pt;
+  font-size: 8.8pt;
+  color: var(--muted);
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.para {
+  margin: 0 0 3.5pt;
+  text-align: justify;
+}
+
+ul {
+  margin: 0 0 2pt;
+  padding-left: 13pt;
+}
+
+li {
+  margin-bottom: 1.5pt;
+  text-align: justify;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* The summary paragraph sits directly under its heading with no entry title. */
+h2 + .para {
+  margin-top: 1pt;
+}

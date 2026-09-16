@@ -13,6 +13,11 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<div class="floating-menu">
+			<a href="index.html">Home</a>
+			<a href="about.html">About Me</a>
+			<a href="index.html#projects-header">Project Gallery</a>
+		</div>
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
@@ -34,24 +39,60 @@
 					</section>
 
 				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onload-image-fade-in" id="first">
-						<div class="content">
+					<section class="wrapper style1 align-center" id="first">
+						<div class="inner medium">
 							<h2>Current Role</h2>
 							<p>I am a Machine Learning Engineer at <a href="https://www.blissway.com" target="_blank">Blissway</a>, a Y Combinator-backed startup modernizing highway tolling and roadway safety with
 								roadside AI devices and cloud analytics. As a founding member of the ML team, I have built our computer vision systems from the
-								ground up — including a vision-based vehicle triggering system, axle counting, lane classification, and custom license plate
-								recognition models — and redesigned our ML inference pipeline into optimized microservices that significantly reduced inference costs.
+								ground up — vision-based vehicle triggering, axle counting, lane geometry and registration, vehicle re-identification, and custom
+								license plate recognition models — and re-architected our inference pipeline into per-service microservices that cut serving
+								cost while handling millions of roadside events every day. The models run both in the cloud and on NPUs mounted to poles on
+								live interstates, so the constraints are physical and you find out quickly when you are wrong.
 							</p>
 						</div>
-						<div class="image">
-							<img src="images/banner.jpg" alt="Blissway" />
+					</section>
+
+
+				<!-- Current work -->
+					<section class="wrapper style1 align-center" id="current-work">
+						<div class="inner">
+							<h2>What I Work On</h2>
+							<p>Perception for roadway infrastructure &mdash; replacing gantries, in-road sensor loops and windshield
+								transponders with cameras and models. Some of it is deep learning; a lot of it is classical geometry,
+								matching and evaluation infrastructure, because that is what the problem calls for.</p>
+							<div class="row gtr-150">
+									<div class="col-4 col-6-medium col-12-small">
+										<h3>Vehicle Triggering</h3>
+										<p>Detecting and tracking vehicles on an edge NPU to decide when one has been fully captured &mdash; the vision replacement for an in-road induction loop.</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<h3>Lane Geometry &amp; Registration</h3>
+										<p>Projective geometry that keeps each camera's stored lane model aligned as poles shake and cameras drift, so a vehicle's lane is never silently mislabelled downstream.</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<h3>Axle Counting</h3>
+										<p>Fusing per-frame wheel detections across several cameras into a single virtual chassis per vehicle, with a confidence that routes the hard cases to human review.</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<h3>Vehicle Re-Identification</h3>
+										<p>Fine-tuned vision transformer embeddings that match the same vehicle across cameras and viewpoints, plus make and model verification as a cross-check on plate reads.</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<h3>License Plate Recognition</h3>
+										<p>A multi-head reader &mdash; plate segmentation, rectification, then text, state and design &mdash; trained in house and measured against the commercial incumbent.</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<h3>Camera Placement Simulation</h3>
+										<p>An analytic optics and geometry simulator that picks camera aim, zoom and illumination for a site, so siting questions get answered without a field trip.</p>
+									</div>
+							</div>
 						</div>
 					</section>
 
 				<!-- Five -->
 					<section class="wrapper style1 align-center" id="projects-header">
 						<div class="inner">
-							<h2>Highlighted Past Projects</h2>
+							<h2>Earlier Projects</h2>
 						</div>
 
 						<!-- Gallery -->
